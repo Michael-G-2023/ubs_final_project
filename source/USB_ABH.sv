@@ -18,6 +18,7 @@ module USB_ABH #(
     input logic [7:0] rx_data,
     output logic get_rx_data, store_tx_data,
     output logic [7:0] tx_data,
+    output logic clear,
     // RX signals
     input logic rx_error,
     input logic [3:0] rx_packet,
@@ -269,5 +270,9 @@ module USB_ABH #(
         if(status_reg != NO) begin
             hready = 0;
         end
+    end
+
+    always_comb begin: outputClear
+        clear = |flush_reg;
     end
 endmodule
