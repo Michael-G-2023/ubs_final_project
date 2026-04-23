@@ -9,6 +9,8 @@ filesets:
         file_type: systemVerilogSource
         depend:
             - "u337mg088:ece337:USB_ABH:1.0.0"
+            - "u337mg033:ece337:usb_tx:1.0.0"
+            - "u337mg033:ece337:usb_buffer:1.0.0"
 
     synth:
         depend:
