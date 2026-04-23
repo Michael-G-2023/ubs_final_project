@@ -5,8 +5,7 @@ module usb_tx (
     input logic [3:0] tx_packet,
     input logic [7:0] tx_packet_data,
     input logic [6:0] buffer_occupancy,
-    output logic tx_error, get_tx_packet_data, tx_transfer_active, dp_out, dm_out, 
-    output logic [4:0] count_out, state_c
+    output logic tx_error, get_tx_packet_data, tx_transfer_active, dp_out, dm_out
 );
 
 //logic [4:0] count_out;
@@ -23,6 +22,7 @@ logic [7:0] parallel_in;
             .rollover_val(5'd24), 
             .count_out(count_out), 
             /* verilator lint_off PINCONNECTEMPTY */
+            
             .clear(), 
             .rollover_flag()
             /* verilator lint_on PINCONNECTEMPTY */
