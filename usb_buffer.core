@@ -8,7 +8,7 @@ filesets:
             - "source/usb_buffer.sv"
         file_type: systemVerilogSource
         depend:
-            - "u337mg088:ece337:flex_counter:1.0.0"
+            - "u337mg033:ece337:flex_counter:1.0.0"
 
     synth:
         depend:

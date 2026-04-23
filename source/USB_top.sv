@@ -22,6 +22,7 @@ module USB_top #(
     logic [7:0] rx_packet_data, tx_packet_data;
     logic get_tx_packet_data, store_rx_packet_data;
     // TX internal
+    logic tx_error, tx_transfer_active;
     
     USB_ABH a0(.*);
     usb_buffer b0(.*);
