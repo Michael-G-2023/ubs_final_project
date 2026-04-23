@@ -166,6 +166,37 @@ module tb_usb_tx ();
         #CLK_PERIOD;
         #CLK_PERIOD;
         tx_packet = '0;
+        reset_dut();
+
+        // THIS ONE, JUST GO THROUGH OVER AND OVER AGAIN FOR DATA OUTPUT.
+        // THEN, LEAVE.
+        tx_packet = 4'b0011;
+        tx_packet_data = '1;
+        buffer_occupancy = 7'b1000000;
+        #CLK_PERIOD; // IDLE
+        #CLK_PERIOD; // GET sync
+        #CLK_PERIOD; // OUT sync
+        #CLK_PERIOD;
+        #CLK_PERIOD;
+        #CLK_PERIOD;
+        #CLK_PERIOD;
+        #CLK_PERIOD;
+        #CLK_PERIOD;
+        #CLK_PERIOD;
+        #CLK_PERIOD; // PID?
+        #CLK_PERIOD; // OUT PID
+        #CLK_PERIOD;
+        #CLK_PERIOD;
+        #CLK_PERIOD;
+        #CLK_PERIOD;
+        #CLK_PERIOD;
+        #CLK_PERIOD;
+        #CLK_PERIOD;
+        #CLK_PERIOD; // done
+        #CLK_PERIOD; // DATA
+        #CLK_PERIOD; //load data
+        #CLK_PERIOD; // out data
+        buffer_occupancy = 7'b0111111;
         #CLK_PERIOD;
         #CLK_PERIOD;
         #CLK_PERIOD;
@@ -175,6 +206,61 @@ module tb_usb_tx ();
         #CLK_PERIOD;
         #CLK_PERIOD;
         #CLK_PERIOD;
+        #CLK_PERIOD;
+        #CLK_PERIOD;
+        #CLK_PERIOD;
+        #CLK_PERIOD;
+        #CLK_PERIOD;
+        #CLK_PERIOD;
+        #CLK_PERIOD;
+        #CLK_PERIOD;
+        #CLK_PERIOD;
+        #CLK_PERIOD;
+        #CLK_PERIOD;
+        #CLK_PERIOD;
+        #CLK_PERIOD;
+        #CLK_PERIOD;
+        #CLK_PERIOD;
+        #CLK_PERIOD;
+        #CLK_PERIOD;
+        #CLK_PERIOD;
+        #CLK_PERIOD;
+        #CLK_PERIOD;
+        #CLK_PERIOD;
+        #CLK_PERIOD;
+        #CLK_PERIOD;
+        #CLK_PERIOD;
+        #CLK_PERIOD;
+        #CLK_PERIOD;
+        #CLK_PERIOD;
+        #CLK_PERIOD;
+        #CLK_PERIOD;
+        #CLK_PERIOD;
+        #CLK_PERIOD;
+        #CLK_PERIOD;
+        #CLK_PERIOD;
+        #CLK_PERIOD;
+        #CLK_PERIOD;
+        #CLK_PERIOD;
+        #CLK_PERIOD;
+        #CLK_PERIOD;
+        #CLK_PERIOD;
+        #CLK_PERIOD;
+        #CLK_PERIOD;
+        #CLK_PERIOD;
+        buffer_occupancy = '0;
+        #CLK_PERIOD;
+        #CLK_PERIOD;
+        #CLK_PERIOD;
+        #CLK_PERIOD;
+        #CLK_PERIOD;
+        #CLK_PERIOD;
+        #CLK_PERIOD;
+        #CLK_PERIOD;
+        #CLK_PERIOD;
+        #CLK_PERIOD;
+        #CLK_PERIOD;
+
         $finish;
     end
 endmodule

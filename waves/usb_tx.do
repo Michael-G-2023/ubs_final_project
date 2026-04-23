@@ -14,8 +14,8 @@ add wave -noupdate -divider {ENCODED SIGNAL}
 add wave -noupdate /tb_usb_tx/dp_out
 add wave -noupdate /tb_usb_tx/dm_out
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{PROPER RUN NO DATA} {44694 ps} 1} {{CORRECT OPERATION DATA} {365000 ps} 1} {{END NO DATA} {265000 ps} 1} {{END 1 DATA} {706469 ps} 1} {{START DATA + 0} {815722 ps} 1} {{END DATA ERROR} {1027361 ps} 1}
-quietly wave cursor active 6
+WaveRestoreCursors {{PROPER RUN NO DATA} {44694 ps} 1} {{CORRECT OPERATION DATA} {365000 ps} 1} {{END NO DATA} {265000 ps} 1} {{END 1 DATA} {706469 ps} 1} {{START DATA + 0} {815722 ps} 1} {{END DATA ERROR} {1027361 ps} 1} {{MANY MANY DATA} {1131221 ps} 1} {{MANY MANY DATA END} {1961410 ps} 1}
+quietly wave cursor active 5
 configure wave -namecolwidth 150
 configure wave -valuecolwidth 100
 configure wave -justifyvalue left
@@ -30,4 +30,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ns
 update
-WaveRestoreZoom {0 ps} {1239 ns}
+WaveRestoreZoom {0 ps} {2079 ns}
