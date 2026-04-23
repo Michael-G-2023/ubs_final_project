@@ -8,7 +8,7 @@ module usb_tx (
     output logic tx_error, get_tx_packet_data, tx_transfer_active, dp_out, dm_out
 );
 
-//logic [4:0] count_out;
+logic [4:0] count_out;
 logic count_enable, shift_enable, load_enable, eop_signal, empty, serial_out, d_tx_packet;
 logic [7:0] parallel_in;
 // COUNTER SYSTEM
