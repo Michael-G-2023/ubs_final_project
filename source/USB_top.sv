@@ -10,7 +10,7 @@ module USB_top #(
     input logic hwrite,
     input logic [31:0] hwdata,
     output logic [31:0] hrdata,
-    output logic hresp, hready, d_mode
+    output logic hresp, hready, d_mode,
     // TX Module
     output logic dp_out, dm_out
 );
@@ -23,5 +23,7 @@ module USB_top #(
     logic get_tx_packet_data, store_rx_packet_data;
     // TX internal
     
-
+    USB_ABH a0(.*);
+    usb_buffer b0(.*);
+    usb_tx t0 (.*);
 endmodule
